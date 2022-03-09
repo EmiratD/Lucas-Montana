@@ -1,0 +1,75 @@
+:root {
+    --color-primary: rgba(25, 132, 155, 1);
+    --color-wrapper: rgba(39, 42, 47, 1);
+    --color-text: rgba(255, 255, 255, 1);
+  };
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+body,html{
+margin: 0;
+padding: 0;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: var(--color-wrapper);
+    .header {
+        height: 58px;
+        background: var(--color-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: var(--color-text);
+        }
+    }
+    .main {
+        .section1 {
+            .img {
+            }
+            .info {
+                &__one {
+                }
+                &__two {
+                }
+                &__tree {
+                }
+                .btn {
+                }
+            }
+        }
+        .section2 {
+            .portfolio {
+            }
+            .text {
+            }
+            .gallery {
+                .foto {
+                }
+            }
+        }
+    }
+    .footer {
+        .contact {
+            .ava {
+            }
+            &__info {
+                &-name {
+                }
+                &-namber {
+                }
+                &-address {
+                }
+            }
+        }
+        &__save {
+        }
+    }
+}
