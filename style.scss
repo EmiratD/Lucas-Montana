@@ -45,7 +45,7 @@ padding: 0;
         .section1 {
             max-width: 1038.07px;
             height: 355px;
-            gap: 68px;
+            gap: 65px;
             @include flexBox(space-between,center);
             .img {
                 width: 411px;
@@ -54,7 +54,7 @@ padding: 0;
             }
             .info {
                 max-width: 559.07px;
-                height: 354px;
+                height: 100%;
                 gap: 30px;
                 @include flexBox(space-around, flex-start, column);
                 &__one {
@@ -82,6 +82,44 @@ padding: 0;
                 }
             }
         }
+        @media (max-width: 1200px) { 
+            .section1{
+                max-width: 776px;
+                height: 100%;
+                @include flexBox(space-between,center,column);
+                .img{
+                    width: 762px;
+                    height: 355px;
+                    img{
+                        width: 762px;
+                        height: 355px;
+                        object-fit: cover;
+                    }
+                }
+                .info{
+                    max-width: 766px;
+                }
+            }
+        }
+        @media (max-width: 745px) { 
+            .section1{
+                max-width: 776px;
+                height: 100%;
+                @include flexBox(space-between,center,column);
+                .img{
+                    width: 341px;
+                    height: 355px;
+                    img{
+                        width: 341px;
+                        height: 355px;
+                        object-fit: cover;
+                    }
+                }
+                .info{
+                    max-width: 341px;
+                }
+            }
+        }
         .section2 {
             max-width: 1038px;
             height: 615.82px;
@@ -102,6 +140,41 @@ padding: 0;
                     width: 244.24px;
                     height: 244.24px;
                     background: #C4C4C4;
+                }
+            }
+        }
+        @media (max-width: 1200px) {
+            .section2{
+                max-width: 776px;
+                height: 482px;
+                .gallery{
+                    .foto {
+                        width: 180px;
+                        height: 180px;
+                        img{
+                            width: 180px;
+                            height: 180px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 745px) {
+            .section2{
+                max-width: 345px;
+                height: 869px;
+                .gallery{
+                    grid-template-columns: repeat(2, 1fr);
+                    .foto {
+                        width: 165px;
+                        height: 165px;
+                        img{
+                            width: 165px;
+                            height: 165px;
+                            object-fit: cover;
+                        }
+                    }
                 }
             }
         }
