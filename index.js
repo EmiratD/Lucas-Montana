@@ -1,9 +1,28 @@
-// Задание
-// Сверстать макет - сайт портфолио фотографа. Обязательный элемент на странице - модальное окно открывающееся по клику на кнопку "contact me". Данные с формы должны собираться в отдельный объект form и выводиться в консоль при сабмите
 
-// Дополнительное задание
-// Сделать интерактивную галерею. При клике на картинку, появляется модальное окно с увеличенной картинкой.
-
-// За это задание вы можете получить дополнительные 10 баллов. Баллы не могут быть больше 100. Например, если ваша работа вышла на 55 баллов, но вы сделали галерею на 10 баллов, итоговый балл будет 65. Но если вы за основную работу получили 99, то итоговый бал будет 100. Не 109.
-
- 
+const openModal = (triggerSelector, modalDataSelector) => { 
+    const trigger = document.querySelector(triggerSelector) 
+    const modal = document.querySelector(modalDataSelector) 
+    if (!trigger || !modal) return 
+    trigger.addEventListener('click', e => { 
+      e.preventDefault() 
+      modal.classList.add('modal_active') 
+    })
+  }
+  openModal('.btn', '.modal')
+  
+  const closeModal = () => {
+    const modals = document.querySelectorAll('.modal')
+    if (!modals) return 
+    modals.forEach(el => { 
+      el.addEventListener('click', e => { 
+        if (e.target.closest('.modal__close')) { 
+          el.classList.remove('modal_active') 
+        }
+        if (!e.target.closest('.modal__body')) {область
+          el.classList.remove('modal_active') 
+        }
+      })
+    })
+  }
+  closeModal()
+  

@@ -420,4 +420,185 @@ body, html {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.479);
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal .modal__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.modal .modal__body .modal__content {
+  max-width: 606px;
+  height: 536px;
+  background: var(--color-wrapper);
+  padding: 50px;
+}
+
+@media (max-width: 745px) {
+  .modal .modal__body .modal__content {
+    max-width: 400px;
+    height: 600px;
+  }
+}
+
+.modal .modal__body .modal__content .modal__content-title {
+  margin-bottom: 15px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+
+.modal .modal__body .modal__content .modal__content-text {
+  width: 567.77px;
+  height: 54px;
+  margin-bottom: 26px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+
+@media (max-width: 745px) {
+  .modal .modal__body .modal__content .modal__content-text {
+    width: 300px;
+    height: 80px;
+  }
+}
+
+.modal .modal__body .modal__content .modal__content-form .textEmail {
+  width: 569px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 745px) {
+  .modal .modal__body .modal__content .modal__content-form .textEmail {
+    width: 400px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.modal .modal__body .modal__content .modal__content-form .textEmail .name, .modal .modal__body .modal__content .modal__content-form .textEmail .email {
+  width: 200px;
+  height: 50px;
+  padding-left: 16px;
+  background: #324b53;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  border: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 745px) {
+  .modal .modal__body .modal__content .modal__content-form .textEmail .name, .modal .modal__body .modal__content .modal__content-form .textEmail .email {
+    width: 400px;
+    margin-right: 0px;
+  }
+}
+
+.modal .modal__body .modal__content .modal__content-form .textEmail .email {
+  width: 347px;
+  margin-right: 0px;
+}
+
+@media (max-width: 745px) {
+  .modal .modal__body .modal__content .modal__content-form .textEmail .email {
+    width: 400px;
+  }
+}
+
+.modal .modal__body .modal__content .modal__content-form .textarea {
+  width: 567px;
+  height: 219px;
+  background: #324b53;
+  border: none;
+  resize: none;
+  margin-bottom: 26px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+
+@media (max-width: 745px) {
+  .modal .modal__body .modal__content .modal__content-form .textarea {
+    width: 400px;
+    padding-left: 16px;
+  }
+}
+
+.modal .modal__body .modal__content .modal__content-form .modal__btn {
+  width: 217px;
+  height: 50px;
+  border: 2px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: none;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.modal_active {
+  visibility: visible;
+  opacity: 5;
+}
 /*# sourceMappingURL=style.css.map */
