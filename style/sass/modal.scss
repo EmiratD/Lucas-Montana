@@ -1,0 +1,135 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.479);
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+
+  .modal__body {
+
+    min-height: 100%;
+    @include flexBox(center, center);
+
+    .modal__content {
+
+      position: relative;
+      max-width: 606px;
+      background: var(--color-wrapper);
+      padding: 20px;
+
+      .close_btn {
+        background: none;
+        outline: none;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        &:hover {
+          svg {
+            path {
+              stroke: rgb(149, 149, 151);
+            }
+          }
+        }
+      }
+
+      @media (max-width: 745px) {
+        max-width: 400px;
+        height: 600px;
+      }
+
+      .modal__content-title {
+        margin-bottom: 15px;
+        @include ubuntu(24px, 28px, bold);
+      }
+
+      .modal__content-text {
+        margin-bottom: 26px;
+        @include ubuntu(16px, 18px);
+
+        @media (max-width: 745px) {
+          width: 300px;
+          height: 80px;
+        }
+      }
+
+      .modal__content-form {
+        .textEmail {
+          width: 569px;
+          @include flexBox(space-between, center);
+
+          @media (max-width: 745px) {
+            width: 400px;
+            flex-direction: column;
+          }
+
+          .name,
+          .email {
+            width: 200px;
+            height: 50px;
+            padding-left: 16px;
+            background: rgba(50, 75, 83, 1);
+            @include ubuntu(16px, 50px, 300);
+            border: none;
+            margin-right: 20px;
+            margin-bottom: 20px;
+
+            @media (max-width: 745px) {
+              width: 400px;
+              margin-right: 0px;
+            }
+          }
+
+          .email {
+            width: 347px;
+            margin-right: 0px;
+
+            @media (max-width: 745px) {
+              width: 400px;
+            }
+          }
+        }
+
+        .textarea {
+          width: 567px;
+          height: 219px;
+          background: rgba(50, 75, 83, 1);
+          border: none;
+          resize: none;
+          padding: 10px;
+          margin-bottom: 26px;
+          @include ubuntu(16px, 18px, 300);
+
+          @media (max-width: 745px) {
+            width: 400px;
+            padding-left: 16px;
+          }
+        }
+
+        .submit_btn {
+          width: 217px;
+          height: 50px;
+          border: 2px solid #FFFFFF;
+          box-sizing: border-box;
+          background: none;
+          @include ubuntu(14px, 20px, bold);
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          cursor: pointer;
+          &:hover {
+            background: gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal_active {
+  visibility: visible;
+  opacity: 5;
+}

@@ -1,0 +1,43 @@
+.footer {
+  height: 205px;
+  background: var(--color-primary);
+  @include flexBox(space-between, center, column);
+
+  .contact {
+      margin-top: 42px;
+      gap: 35px;
+      @include flexBox(center, center, row);
+
+      .ava {
+          width: 94px;
+          height: 94px;
+          border-radius: 50%;
+          overflow: hidden;
+      }
+
+      &__info {
+          @include flexBox(center, flex-start, column);
+          gap: 6px;
+
+          &-name {
+              @include ubuntu(22px, 25px, bold);
+          }
+
+          &-namber {
+              @include ubuntu(18px, 21px);
+          }
+
+          &-address {
+              @include ubuntu(16px, 18px);
+          }
+      }
+  }
+
+  &__save {
+      width: 100%;
+      height: 44px;
+      background: rgba(22, 117, 138, 1);
+      @include ubuntu(16px, 18px);
+      @include flexBox(center, center)
+  }
+}

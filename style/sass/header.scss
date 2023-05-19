@@ -1,0 +1,11 @@
+.header {
+  height: 58px;
+  background: var(--color-primary);
+  margin-bottom: 51px;
+  @include flexBox(center, center);
+
+  &__text {
+      text-transform: uppercase;
+      @include ubuntu(30, 34, bold);
+  }
+}

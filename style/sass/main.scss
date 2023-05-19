@@ -1,0 +1,173 @@
+.main {
+  @include flexBox(center, center, column);
+  gap: 105px;
+
+  .section1 {
+      max-width: 1038.07px;
+      height: 355px;
+      gap: 65px;
+      @include flexBox(space-between, center);
+
+      .img {
+          width: 411px;
+          height: 355px;
+          overflow: hidden;
+      }
+
+      .info {
+          max-width: 559.07px;
+          height: 100%;
+          gap: 30px;
+          @include flexBox(space-around, flex-start, column);
+
+          &__one {
+              border-bottom: 4px solid var(--color-primary);
+              padding-bottom: 15px;
+              @include ubuntu(30px, 34px)
+          }
+
+          &__two {
+              margin-top: -15px;
+              @include ubuntu(24px, 28px, bold)
+          }
+
+          &__tree {
+              @include ubuntu(16px, 18px)
+          }
+
+          .contact {
+              width: 293px;
+              height: 50px;
+              border: 2px solid #FFFFFF;
+              box-sizing: border-box;
+              background: none;
+              cursor: pointer;
+              @include ubuntu(16px, 18px);
+
+              &:hover {
+                  background: var(--color-primary);
+              }
+          }
+      }
+  }
+
+  @media (max-width: 1200px) {
+      .section1 {
+          max-width: 776px;
+          height: 100%;
+          @include flexBox(space-between, center, column);
+
+          .img {
+              width: 762px;
+              height: 355px;
+
+              img {
+                  width: 762px;
+                  height: 355px;
+                  object-fit: cover;
+              }
+          }
+
+          .info {
+              max-width: 766px;
+          }
+      }
+  }
+
+  @media (max-width: 745px) {
+      .section1 {
+          max-width: 776px;
+          height: 100%;
+          @include flexBox(space-between, center, column);
+
+          .img {
+              width: 341px;
+              height: 355px;
+
+              img {
+                  width: 341px;
+                  height: 355px;
+                  object-fit: cover;
+              }
+          }
+
+          .info {
+              max-width: 341px;
+          }
+      }
+  }
+
+  .section2 {
+      max-width: 1038px;
+      height: 615.82px;
+      margin-bottom: 100px;
+
+      .portfolio {
+          margin-bottom: 15px;
+          @include ubuntu(24px, 28px, bold)
+      }
+
+      .text {
+          margin-bottom: 28px;
+          @include ubuntu(16px, 18px)
+      }
+
+      .gallery {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20.35px;
+
+          .foto {
+              width: 244.24px;
+              height: 244.24px;
+              background: #C4C4C4;
+              cursor: pointer;
+              &:hover{
+                transform: scale(1.01);
+              }
+          }
+      }
+  }
+
+  @media (max-width: 1200px) {
+      .section2 {
+          max-width: 776px;
+          height: 482px;
+
+          .gallery {
+              .foto {
+                  width: 180px;
+                  height: 180px;
+
+                  img {
+                      width: 180px;
+                      height: 180px;
+                      object-fit: cover;
+                  }
+              }
+          }
+      }
+  }
+
+  @media (max-width: 745px) {
+      .section2 {
+          max-width: 345px;
+          height: 869px;
+
+          .gallery {
+              grid-template-columns: repeat(2, 1fr);
+
+              .foto {
+                  width: 165px;
+                  height: 165px;
+
+                  img {
+                      width: 165px;
+                      height: 165px;
+                      object-fit: cover;
+                  }
+              }
+          }
+      }
+  }
+}
